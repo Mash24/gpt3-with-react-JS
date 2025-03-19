@@ -1,0 +1,90 @@
+.cta {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: row;
+
+    padding: 2rem;
+    margin: 4rem;
+    border-radius: 1rem;
+    background: var(--gradient-bar);
+
+}
+
+.gpt3__cta p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #0E0E0E;
+    margin-bottom: 1rem; /* Adds space below the paragraph */
+}
+
+.gpt3__cta h3 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: #0E0E0E;
+}
+
+.gpt3__cta-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+
+}
+
+.gpt3__cta-btn button {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #FFF;
+    background: #000000;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+    min-width: 10rem;
+    transition: all 0.3s ease;
+}
+
+/* Add a Hover effect to the button */
+.gpt3__cta-btn button:hover {
+    background: var(--gradient-bar); /* Change the background color on hover */
+    transform: scale(1.1); /* Scale the button on hover */
+}
+
+@media screen and (max-width: 550px) {
+    .cta {
+        margin: 4rem 2rem; /* Adjust margin for mobile */
+    }
+
+    .gpt3__cta p {
+        font-size: 0.875rem; /* Smaller font size for mobile */
+        line-height: 1.3rem; /* Adjust line-height */
+    }
+
+    .gpt3__cta h3 {
+        font-size: 1rem; /* Smaller font size */
+        line-height: 2rem; /* Adjust line-height */
+    }
+
+    .gpt3__cta-btn {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 1rem; /* Add space between content and button */
+    }
+
+    .gpt3__cta-btn button {
+        font-size: 0.7rem;
+        line-height: 1rem;
+        min-width: auto; /* Reset minimum width */
+    }
+    /* Scale down the button on hover for small screens */
+    .gpt3__cta-btn button:hover {
+        transform: scale(0.9); /* Scale the button down on hover */
+    }
+}

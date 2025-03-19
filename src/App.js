@@ -1,4 +1,5 @@
 import React from 'react'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 import './App.css'
 
 // import components we created inside the container and components folder, but bringing them from the index.js file inside each folder

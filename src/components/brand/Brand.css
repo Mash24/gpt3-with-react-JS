@@ -16,3 +16,22 @@
     justify-content: center; /* center the content horizontally */
     align-items: center; /* center the content vertically */
 }
+
+@media screen and (max-width: 550px) {
+    .brand {
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand div {
+        flex-direction: column; /* Stack images vertically */
+        max-width: 100%; /* Ensure the container takes full width */
+        gap: 1rem; /* Reduce gap between logos */
+    }
+
+    .brand img {
+        max-width: 80%; /* Adjust image width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

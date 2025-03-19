@@ -1,0 +1,78 @@
+.gpt3__blog-container {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Group A (Single Article on the Left) */
+.gpt3__blog-container_groupA {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+}
+
+.gpt3__blog-container_groupA .article {
+    width: 100%;
+    height: 100%;
+}
+
+/* Group B (4 Articles in a 2x2 Grid on the Right) */
+.gpt3__blog-container_groupB {
+    flex: 1.5;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.gpt3__blog-container_article-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures spacing between title, date, and Read More */
+    padding: 1rem 1.5rem;
+    background: var(--color-footer);
+    height: 100%;
+}
+
+/* Date Styling */
+.gpt3__blog-container_article-content p:first-child {
+    font-size: 0.875rem; /* Smaller font for date */
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+/* Title Styling */
+.gpt3__blog-container_article-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+/* "Read More.." Styling */
+.gpt3__blog-container_article-content p:last-child {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-subtext);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.gpt3__blog-container_article-content p:last-child:hover {
+    color: var(--color-primary);
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .gpt3__blog-container {
+        flex-direction: column;
+    }
+
+    .gpt3__blog-container_groupA,
+    .gpt3__blog-container_groupB {
+        max-width: 100%;
+    }
+
+    .gpt3__blog-container_groupB {
+        grid-template-columns: 1fr; /* Stack articles on smaller screens */
+    }
+}
